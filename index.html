@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Buttons</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="button">
+        <i class="fab fa-facebook-f"></i>
+        <div class="blurred">
+            <span></span><span></span>
+        </div>
+   </div>
+
+   <!-- SVG FILTER (https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix) -->
+   <svg>
+    <defs>
+     <filter id='goo'>
+      <feGaussianBlur in='SourceGraphic' 
+      stdDeviation='10' result='name'/>
+       <feColorMatrix in='name' mode='matrix'
+           values='1 0 0 0 0
+                   0 1 0 0 0 
+                   0 0 1 0 0
+                   0 0 0 30 -15 ' result='aab'/>
+       <feBlend in='SourceGraphic' in2='aab'/>
+      </filter>
+    </defs>
+   </svg>
+    
+</body>
+</html>
